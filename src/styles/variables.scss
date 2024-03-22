@@ -1,0 +1,40 @@
+// colors
+$iris: #5D5FEF;
+$fuchsia: #EF5DA8;
+$blue: #3877EE;
+$blackBlue: #42567A;
+$grey: #F4F5F9;
+
+$gradient: linear-gradient(to bottom, $iris, $fuchsia);
+
+// breakpoints
+$p360: 360px;
+$p480: 480px;
+$p768: 768px;
+$p1025: 1025px;
+$p1280: 1280px;
+$p1440: 1441px;
+$p1600: 1600px;
+$p1920: 1920px;
+
+@mixin before($point) {
+  @media (max-width: ($point - 1)) {
+    @content;
+  }
+}
+
+@mixin between($point1, $point2) {
+  @media (min-width: $point1) and (max-width: ($point2 - 1)) {
+    @content;
+  }
+}
+
+@mixin after($point) {
+  @media (min-width: $point) {
+    @content;
+  }
+}
+
+//font
+$fontFamily: 'PTSans', sans-serif;
+$fontFamilyAccent: 'PTSansNarrow', sans-serif;

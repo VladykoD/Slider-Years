@@ -1,0 +1,51 @@
+@import './fonts';
+@import './variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overscroll-behavior: none;
+  background: $grey;
+  color: white;
+}
+
+body {
+  font: 500 14px / 1.5 $fontFamily;
+
+  @include after($p768) {
+    font-size: 16px;
+  }
+
+  @include after($p1025) {
+    font-size: 18px;
+  }
+
+  @include after($p1280) {
+    font-size: 20px;
+  }
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+a {
+  color: currentColor;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
