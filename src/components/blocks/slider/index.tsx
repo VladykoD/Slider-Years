@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,31 +9,17 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 import css from "./styles.module.scss";
+import { Slide } from "@/types/types";
 
-type SlideWithZoomProps = {
+interface ConnectedSlidersProps {
   sliderId: string;
-  slides: SlideType[];
-};
-
-interface SlideType {
-  id: string;
-  startDate: string[];
-  endDate: string[];
-  events: EventType[];
-  category: CategoryType;
+  slides: Slide[];
 }
 
-interface CategoryType {
-  id: number;
-  label: string;
-}
-
-interface EventType {
-  date: string;
-  description: string;
-}
-
-export const ConnectedSliders = ({ sliderId, slides }: SlideWithZoomProps) => {
+export const ConnectedSliders = ({
+  sliderId,
+  slides,
+}: ConnectedSlidersProps) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [inited, setInited] = useState(false);
   const [tablet, setTablet] = useState(false);

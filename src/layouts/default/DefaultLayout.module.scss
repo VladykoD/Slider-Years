@@ -1,0 +1,19 @@
+@import '@/styles/mixins.scss';
+
+
+.layout {
+  position: relative;
+  z-index: 10;
+  min-height: var(--vh);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  @include container;
+
+  @include after($p768) {
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+}
