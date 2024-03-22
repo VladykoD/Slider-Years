@@ -1,0 +1,68 @@
+@import 'mixins.scss';
+
+.button {
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s cubic-bezier(0.61, 1, 0.88, 1);
+  text-decoration: none;
+  border-radius: 50%;
+
+  &.white {
+    color: var(--blue);
+    background: var(--white);
+    box-shadow: 0 0 1.5rem 0 var(--blue);
+
+    &:hover {
+      color: var(--fuchsia);
+    }
+  }
+
+  &.outline {
+    color: var(--blue-dark);
+    background: transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid currentColor;
+      opacity: .5;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      color: var(--fuchsia);
+    }
+  }
+
+
+  [disabled],
+  &.disabled {
+    pointer-events: none;
+
+    & > span {
+      opacity: 0.5;
+    }
+  }
+
+
+  &.small {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &.medium {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &.large {
+    width: 6rem;
+    height: 6rem;
+  }
+}
