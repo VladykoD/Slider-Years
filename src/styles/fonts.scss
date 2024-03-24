@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'PTSans';
-  src: url('../assets/fonts/PT-Sans_Bold.woff2') format('woff2'),
-  url('../assets/fonts/PT-Sans_Bold.woff') format('woff');
+  src: url('../assets/fonts/ptsansbold.woff2') format('woff2'),
+  url('../assets/fonts/ptsansbold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'PTSans';
-  src: url('../assets/fonts/PT-Sans_Regular.woff2') format('woff2'),
-  url('../assets/fonts/PT-Sans_Regular.woff') format('woff');
+  src: url('../assets/fonts/ptsansregular.woff2') format('woff2'),
+  url('../assets/fonts/ptsansregular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -18,9 +18,9 @@
 
 @font-face {
   font-family: 'PTSansNarrow';
-  src: url('../assets/fonts/PT-Sans_Narrow-Regular.woff2') format('woff2'),
-  url('../assets/fonts/PT-Sans_Narrow-Regular.woff') format('woff');
-  font-weight: 400;
+  src: url('../assets/fonts/ptsansnarrowbold.woff2') format('woff2'),
+  url('../assets/fonts/ptsansnarrowbold.woff') format('woff');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
