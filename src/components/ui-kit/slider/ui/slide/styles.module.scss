@@ -1,0 +1,42 @@
+@import '@/styles/mixins';
+
+
+.slider {
+  position: relative;
+  margin-top: 5.6rem;
+  transition: opacity var(--transition-fast);
+
+  &.hide {
+    opacity: 0;
+  }
+}
+
+.slide {
+  max-width: calc(var(--col) * 5);
+  padding-right: 3.2rem;
+}
+
+.title {
+  color: var(--blue);
+  margin-bottom: 1.5rem;
+  font: 600 2.5rem / 1 var(--fontNarrow);
+}
+
+.navBtn {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.prev {
+  left: -6rem;
+}
+
+.next {
+  right: -6rem;
+}

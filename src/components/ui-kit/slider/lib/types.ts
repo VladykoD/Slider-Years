@@ -6,6 +6,7 @@ export type Slide = {
 };
 
 export type Event = {
+  id: string;
   date: string;
   description: string;
 };

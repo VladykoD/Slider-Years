@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import clsx from "clsx";
 import Link from "next/link";
-import styles from "./Button.module.scss";
+import styles from "./styles.module.scss";
 
 interface ButtonProps {
   children?: ReactNode;
@@ -12,9 +12,6 @@ interface ButtonProps {
   blank?: boolean;
   bg?: "white" | "outline";
   size?: "small" | "medium" | "large";
-  type?: "button" | "submit" | "reset";
-  eventAction?: string;
-  loading?: boolean;
 }
 
 export function Button({
@@ -26,15 +23,12 @@ export function Button({
   disabled,
   bg = "white",
   size = "medium",
-  type = "submit",
-  eventAction,
-  loading = false,
   ...rest
 }: ButtonProps) {
-  // const [focus, setFocus] = useState(false);
-
   const handleClick = () => {
-    onClick?.();
+    if (!disabled && onClick) {
+      onClick();
+    }
   };
 
   return href ? (
@@ -48,7 +42,6 @@ export function Button({
         styles[bg],
         styles[size],
         disabled && styles.disabled,
-        loading && styles.loading,
       )}
       rel={blank ? "noreferrer noopener" : ""}
     >
@@ -63,9 +56,7 @@ export function Button({
         styles[bg],
         styles[size],
         disabled && styles.disabled,
-        loading && styles.loading,
       )}
-      type={type}
       {...rest}
     >
       {children}

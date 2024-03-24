@@ -6,40 +6,22 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: calc(100vw / 192);
+}
+
 html, body {
   overscroll-behavior: none;
   background: var(--grey);
   color: var(--blue-dark);
 }
 
-html {
-  font-size: 10px;
-}
-
 body {
-  font: 500 1.4rem / 1.5 var(--font);
-
-  @include after($p768) {
-    font-size: 1.6rem;
-  }
-
-  @include after($p1025) {
-    font-size: 1.8rem;
-  }
-
-  @include after($p1280) {
-    font-size: 2rem;
-  }
+  font: 500 2rem / 1.5 var(--font);
 }
 
 html, body, #__next {
   height: 100%;
-}
-
-
-::selection {
-  color: var(--white);
-  background: var(--orange);
 }
 
 a {

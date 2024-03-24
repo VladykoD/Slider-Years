@@ -1,4 +1,4 @@
-@import 'mixins';
+@import '@/styles/mixins';
 
 .button {
   white-space: nowrap;
@@ -8,23 +8,30 @@
   justify-content: center;
   border: none;
   cursor: pointer;
-  transition: background 0.3s cubic-bezier(0.61, 1, 0.88, 1);
+  transition: background var(--transition-fast), opacity var(--transition-fast);
   text-decoration: none;
   border-radius: 50%;
 
   &.white {
     color: var(--blue);
     background: var(--white);
-    box-shadow: 0 0 1.5rem 0 var(--blue);
+    box-shadow: 0 0 1.5rem 0 #3877EE1A;
 
     &:hover {
       color: var(--fuchsia);
+    }
+    
+    &[disabled],
+    &.disabled {
+      pointer-events: none;
+      opacity: 0;
     }
   }
 
   &.outline {
     color: var(--blue-dark);
     background: transparent;
+    position: relative;
 
     &::after {
       content: '';
@@ -38,14 +45,11 @@
     &:hover {
       color: var(--fuchsia);
     }
-  }
 
 
-  [disabled],
-  &.disabled {
-    pointer-events: none;
-
-    & > span {
+    &[disabled],
+    &.disabled {
+      pointer-events: none;
       opacity: 0.5;
     }
   }

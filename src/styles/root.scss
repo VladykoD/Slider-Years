@@ -8,7 +8,7 @@
   --fontNarrow: 'PTSansNarrow', sans-serif;
 
   --ease: cubic-bezier(.215, .61, .355, 1);
-  --transition-fast: .3s var(--ease);
+  --transition-fast: .4s var(--ease);
   --transition-medium: .6s var(--ease);
   --transition-slow: .8s var(--ease);
 
@@ -19,14 +19,6 @@
   --white: #fff;
   --grey: #F4F5F9;
   --gradient: linear-gradient(to bottom, var(--iris), var(--fuchsia));
-
-  --main-x-gap: .75rem;
-  --main-y-gap: .75rem;
-
-  @include before($p1025) {
-    --main-x-gap: 0;
-    --main-y-gap: .5rem;
-  }
-
+ 
   --col: calc(var(--vw) / 24);
 }
