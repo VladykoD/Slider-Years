@@ -1,17 +1,5 @@
-export type Slide = {
+export type Image = {
   id: string;
-  startDate: string[];
-  endDate: string[];
-  events: Event[];
-  category: Category;
-};
-
-export type Category = {
-  id: number;
-  label: string;
-};
-
-export type Event = {
-  date: string;
-  description: string;
+  width: string;
+  height: string;
 };

@@ -8,8 +8,8 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import css from "./styles.module.scss";
-import { Slide } from "@/types/types";
+import styles from "./styles.module.scss";
+import { Slide } from "./types";
 
 interface ConnectedSlidersProps {
   sliderId: string;
@@ -25,7 +25,7 @@ export const ConnectedSliders = ({
   const [tablet, setTablet] = useState(false);
 
   return (
-    <div className={css.doubleSlider}>
+    <div className={styles.doubleSlider}>
       <Swiper
         onInit={() => setInited(true)}
         id={`main-${sliderId}`}
@@ -34,15 +34,15 @@ export const ConnectedSliders = ({
         loop
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className={clsx(css.mainSlider, inited && css.active)}
+        className={clsx(styles.mainSlider, inited && styles.active)}
       >
         {slides.map((elem, i) => (
           <SwiperSlide
-            className={clsx(css.mainSlider__slide)}
+            className={clsx(styles.mainSlider__slide)}
             key={`main-${elem.id}`}
           >
-            <p>{elem.startDate}</p>
-            <p>{elem.endDate}</p>
+            <p>{elem.date[0]}</p>
+            <p>{elem.date[1]}</p>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -52,14 +52,15 @@ export const ConnectedSliders = ({
         onSwiper={setThumbsSwiper}
         id={`nav-${sliderId}`}
         slidesPerView={3}
+        navigation
         spaceBetween={tablet ? 8 : 16}
         loop
         modules={[FreeMode, Navigation, Thumbs]}
-        className={clsx(css.navigationSlider, inited && css.active)}
+        className={clsx(styles.navigationSlider, inited && styles.active)}
       >
         {slides.map((elem, i) => (
           <SwiperSlide
-            className={clsx(css.navigationSlider__slide)}
+            className={clsx(styles.navigationSlider__slide)}
             key={`nav-${elem}`}
           >
             <p>{elem.id}</p>

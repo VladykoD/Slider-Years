@@ -6,6 +6,7 @@ import { DefaultLayout } from "@/layouts/default/DefaultLayout";
 import { useCalc } from "@/hooks/useCalc";
 import { Sprite } from "@/components/ui-kit/sprite/Sprite";
 import "@/styles/index.scss";
+import { LayoutGrid } from "@/components/ui-kit/layout-grid/LayoutGrid";
 
 export default function App({ Component, pageProps }: AppProps) {
   let Layout = DefaultLayout;
@@ -31,6 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Layout>
 
       <Sprite />
+      <LayoutGrid />
     </>
   );
 }

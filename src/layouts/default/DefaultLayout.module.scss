@@ -4,16 +4,25 @@
 .layout {
   position: relative;
   z-index: 10;
+  margin: 0 calc(var(--col) * 2) 0 calc(var(--col) * 4);
   min-height: var(--vh);
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
 
-  @include container;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    background: var(--blue-dark);
+    opacity: .2;
+  }
 
-  @include after($p768) {
-    padding-top: 120px;
-    padding-bottom: 40px;
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
   }
 }

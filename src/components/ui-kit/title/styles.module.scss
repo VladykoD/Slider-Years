@@ -1,0 +1,16 @@
+@import '@/styles/mixins';
+
+
+.h1 {
+  @include h1;
+}
+
+.h2 {
+  @include h2;
+  @include title;
+}
+
+.h3 {
+  @include h3;
+  @include title;
+}

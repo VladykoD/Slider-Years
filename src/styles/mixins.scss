@@ -28,22 +28,33 @@ $p1920: 1920px;
 
 
 @mixin h1 {
-  font: 500 64px / 1 var(--font);
+  font: 600 8rem / 1.2 var(--font);
 }
 
 @mixin h2 {
-  font: 500 48px / 1 var(--font);
+  font: 600 5.6rem / 1.2 var(--font);
 }
 
 @mixin h3 {
-  font: 500 32px / 1 var(--font);
+  font: 600 3.2rem / 1.2 var(--font);
+}
+
+@mixin title {
+  position: relative;
+  max-width: 13ch;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.2em;
+    bottom: 0.1em;
+    left: calc(var(--col) * -1);
+    width: .5rem;
+    background: var(--gradient);
+  }
 }
 
 @mixin container {
   width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
-  box-sizing: border-box;
+  padding: 0 var(--col);
 }

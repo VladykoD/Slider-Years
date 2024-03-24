@@ -1,9 +1,10 @@
 import { NextPageWithLayout } from "next";
 import { DefaultLayout } from "@/layouts/default/DefaultLayout";
+import { SliderSection } from "@/components/blocks/slider-section/SliderSection";
 
 const Page: NextPageWithLayout = () => (
   <>
-    <h1>HELLO</h1>
+    <SliderSection />
   </>
 );
 

@@ -1,0 +1,10 @@
+@import '@/styles/mixins';
+
+.section {
+  min-height: var(--vh);
+  padding: 10rem 0 10rem;
+}
+
+.container {
+  @include container;
+}

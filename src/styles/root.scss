@@ -27,4 +27,6 @@
     --main-x-gap: 0;
     --main-y-gap: .5rem;
   }
+
+  --col: calc(var(--vw) / 24);
 }
