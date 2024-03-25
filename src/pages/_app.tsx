@@ -2,7 +2,7 @@ import "@/styles/global.scss";
 import { NextPageWithLayout } from "next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { DefaultLayout } from "@/layouts/default/DefaultLayout";
+import { DefaultLayout } from "@/layouts/default";
 import { useCalc } from "@/hooks/useCalc";
 import { Sprite } from "@/components/ui-kit/sprite/Sprite";
 import "@/styles/index.scss";
@@ -18,8 +18,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Тестовое</title>
-
-        <meta name="theme-color" content="#ffffff" />
         <meta
           name="viewport"
           content="width=device-width,initial-scale=1,user-scalable=no"

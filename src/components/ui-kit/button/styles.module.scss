@@ -20,7 +20,7 @@
     &:hover {
       color: var(--fuchsia);
     }
-    
+
     &[disabled],
     &.disabled {
       pointer-events: none;
@@ -58,15 +58,33 @@
   &.small {
     width: 4rem;
     height: 4rem;
+    font: 400 1.6rem / 1 var(--font);
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
   }
 
   &.medium {
     width: 5rem;
     height: 5rem;
+    font: 400 1.8rem / 1 var(--font);
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
   }
 
   &.large {
-    width: 6rem;
-    height: 6rem;
+    width: 5.6rem;
+    height: 5.6rem;
+    font: 400 2rem / 1 var(--font);
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
   }
 }

@@ -1,3 +1,9 @@
-.slider {
+@import '@/styles/mixins';
 
+.wrapper {
+  height: calc(var(--vh) * .4);
+  padding-bottom: calc(var(--vh) * .05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

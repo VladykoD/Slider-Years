@@ -14,7 +14,7 @@ interface ButtonProps {
   size?: "small" | "medium" | "large";
 }
 
-export function Button({
+export const Button: React.FC<ButtonProps> = ({
   children,
   href,
   blank,
@@ -24,42 +24,41 @@ export function Button({
   bg = "white",
   size = "medium",
   ...rest
-}: ButtonProps) {
+}) => {
   const handleClick = () => {
     if (!disabled && onClick) {
       onClick();
     }
   };
 
+  const buttonClassName = clsx(
+    className,
+    styles.button,
+    styles[bg],
+    styles[size],
+    { [styles.disabled]: disabled },
+  );
+
   return href ? (
-    <Link
-      onClick={handleClick}
-      href={href}
-      target={blank ? "_blank" : ""}
-      className={clsx(
-        className,
-        styles.button,
-        styles[bg],
-        styles[size],
-        disabled && styles.disabled,
-      )}
-      rel={blank ? "noreferrer noopener" : ""}
-    >
-      {children}
+    <Link href={href} passHref>
+      <a
+        target={blank ? "_blank" : "_self"}
+        rel={blank ? "noreferrer noopener" : ""}
+        className={buttonClassName}
+        onClick={handleClick}
+        {...rest}
+      >
+        {children}
+      </a>
     </Link>
   ) : (
     <button
+      disabled={disabled}
+      className={buttonClassName}
       onClick={handleClick}
-      className={clsx(
-        className,
-        styles.button,
-        styles[bg],
-        styles[size],
-        disabled && styles.disabled,
-      )}
       {...rest}
     >
       {children}
     </button>
   );
-}
+};

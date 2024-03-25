@@ -1,12 +1,5 @@
 @import '@/styles/mixins';
 
-.wrapper {
-  height: calc(var(--vh) * .4);
-  padding-bottom: calc(var(--vh) * .05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .title {
   display: flex;
@@ -17,6 +10,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 1;
 
   span {
     &:first-of-type {
@@ -49,123 +43,4 @@
     transform: translateX(-50%);
     height: 1px;
   }
-}
-
-.roundSlider {
-  --block: 5.6rem;
-
-  position: absolute;
-  height: calc(var(--vh) * .6);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  transform: rotate(-240deg);
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border: 1px solid var(--blue-dark);
-    border-radius: 50%;
-    opacity: .2;
-  }
-}
-
-.axis {
-  width: calc(100% + var(--block));
-  height: var(--block);
-  margin-top: calc(var(--block) * -.5);
-  margin-left: calc(var(--block) * -.5);
-  transform-origin: center;
-  transform: rotate(0deg);
-  position: absolute;
-  top: 50%;
-  display: flex;
-  align-items: center;
-  z-index: 2;
-  transition: transform var(--transition-slow);
-  pointer-events: none;
-
-  &.active {
-    .label {
-      visibility: visible;
-      opacity: 1;
-      transition: opacity var(--transition-fast) .3s;
-    }
-
-    .roundbtn {
-      &::after {
-        transform: scale(1);
-        transition: transform .3s ease 0s;
-      }
-
-      &::before {
-        opacity: 1;
-        transition: opacity .2s ease .2s;
-      }
-    }
-  }
-}
-
-.buttonsWrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.roundbtn {
-  width: var(--block);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  border: none;
-  position: relative;
-  font: 400 2rem / 1 var(--font);
-  pointer-events: auto;
-  cursor: pointer;
-  background: transparent;
-
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--blue-dark);
-    border-radius: 50%;
-    transform: scale(0.2);
-    z-index: 1;
-    transition: transform .3s ease .2s;
-  }
-
-  &::before {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    content: attr(data-id);
-    position: absolute;
-    inset: 0;
-    border: 1px solid rgba(66, 86, 122, .5);
-    opacity: 0;
-    background: white;
-    border-radius: 50%;
-    z-index: 2;
-    transition: opacity .2s ease .1s;
-  }
-
-  &:hover {
-    &::after {
-      transform: scale(1);
-      transition: transform .3s ease 0s;
-    }
-
-    &::before {
-      opacity: 1;
-      transition: opacity .2s ease .2s;
-    }
-  }
-}
-
-.label {
-  position: absolute;
-  left: calc(100% + 2rem);
-  opacity: 0;
-  visibility: hidden;
-  font-size: 600 2rem / 1 var(--font);
 }

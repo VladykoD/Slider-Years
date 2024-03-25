@@ -3,14 +3,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./styles.module.scss";
 import { Navigation } from "swiper/modules";
 import { Slide } from "@/components/ui-kit/slider/lib/types";
+import { Button } from "@/components/ui-kit/button";
+import { Icon } from "@/components/ui-kit/sprite/Icon";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import clsx from "clsx";
-import { Button } from "@/components/ui-kit/button/Button";
-import { Icon } from "@/components/ui-kit/sprite/Icon";
 
 interface SliderProps {
   slides: Slide[];
@@ -18,41 +18,41 @@ interface SliderProps {
 }
 
 export const Slider = ({ slides, index }: SliderProps) => {
-  const [swiperEl, setSwiperEl] = useState<any>(null);
-  const [active, setActive] = useState(0);
-  const [hide, setHide] = useState(false);
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
-    if (!swiperEl) return;
+    if (!swiperInstance) return;
 
-    setHide(true);
+    setIsHidden(true);
     const timeoutId = setTimeout(() => {
-      swiperEl.slideTo(0);
-      setActive(index);
-      setHide(false);
+      swiperInstance.slideTo(0);
+      setActiveIndex(index);
+      setIsHidden(false);
     }, 400);
 
     return () => clearTimeout(timeoutId);
-  }, [index, swiperEl]);
+  }, [index, swiperInstance]);
 
   return (
-    <div className={clsx(styles.slider, hide && styles.hide)}>
+    <div className={clsx(styles.slider, isHidden && styles.hide)}>
       <Swiper
-        onSwiper={(swiper) => setSwiperEl(swiper)}
+        onSwiper={setSwiperInstance}
         spaceBetween={0}
         slidesPerView={3}
         navigation={{
           nextEl: `.button-next`,
           prevEl: `.button-prev`,
         }}
-        speed={hide ? 0 : 300}
+        speed={isHidden ? 0 : 300}
         modules={[Navigation]}
       >
-        {slides[active].events.map((event) => (
+        {slides[activeIndex].events.map((event) => (
           <SwiperSlide key={event.id}>
             <div className={styles.slide}>
               <p className={styles.title}>{event.date}</p>
-              <p dangerouslySetInnerHTML={{ __html: event.description }} />
+              <div dangerouslySetInnerHTML={{ __html: event.description }} />
             </div>
           </SwiperSlide>
         ))}

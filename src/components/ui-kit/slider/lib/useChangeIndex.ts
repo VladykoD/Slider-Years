@@ -12,7 +12,6 @@ export const useChangeIndex = (max: number) => {
   };
 
   const goToIndex = (i: number) => {
-    console.log(i);
     setIndex(i);
   };
 

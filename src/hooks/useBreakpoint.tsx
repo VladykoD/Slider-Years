@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export enum Breakpoint {
   Mobile,
@@ -8,35 +8,27 @@ export enum Breakpoint {
 }
 
 export function useBreakpoint() {
-  const [state, setState] = useState<Breakpoint>(Breakpoint.Mobile);
+  const [breakpoint, setBreakpoint] = useState<Breakpoint>(Breakpoint.Mobile);
 
   useEffect(() => {
-    const handler = () => {
-      setState(() => {
-        const w = window.innerWidth;
-
-        if (w <= 767) {
-          return Breakpoint.Mobile;
-        }
-        if (w > 767 && w < 1025) {
-          return Breakpoint.Tablet;
-        }
-        if (w > 1025 && w < 1441) {
-          return Breakpoint.Desktop;
-        }
-
-        return Breakpoint.DesktopXl;
-      });
+    const calculateBreakpoint = (width: number) => {
+      if (width <= 767) return Breakpoint.Mobile;
+      if (width <= 1024) return Breakpoint.Tablet;
+      if (width <= 1440) return Breakpoint.Desktop;
+      return Breakpoint.DesktopXl;
     };
+
+    const handler = () => {
+      setBreakpoint(calculateBreakpoint(window.innerWidth));
+    };
+
     handler();
-    window.addEventListener('resize', handler, {
-      passive: true,
-    });
+    window.addEventListener("resize", handler);
 
     return () => {
-      window.removeEventListener('resize', handler);
+      window.removeEventListener("resize", handler);
     };
   }, []);
 
-  return state;
+  return breakpoint;
 }
