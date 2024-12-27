@@ -1,10 +1,20 @@
 import { NextPageWithLayout } from "next";
 import { DefaultLayout } from "@/layouts/default";
-import { SliderSection } from "@/components/blocks/slider-section";
+import { ScrollSection } from "@/components/blocks/scroll-section";
 
 const Page: NextPageWithLayout = () => (
   <>
-    <SliderSection />
+    <div className={"empty"} />
+    <div className={"empty"} />
+    <div className={"empty"} />
+    <div className={"empty"} />
+    <div className={"empty"} />
+    <ScrollSection />
+    <div className={"empty"} />
+    <div className={"empty"} />
+    <div className={"empty"} />
+    <div className={"empty"} />
+    <div className={"empty"} />
   </>
 );
 

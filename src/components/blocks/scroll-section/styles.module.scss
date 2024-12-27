@@ -1,0 +1,55 @@
+@import '@/styles/mixins';
+
+.section {
+  min-height: var(--vh);
+  padding: max(calc(var(--vh) * 0.05), 50px) 0;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.container {
+  @include container;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+}
+
+.item {
+  position: relative;
+}
+
+.title {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 12px;
+  line-height: 1.2; // Не указывать это значение в пикселях!
+
+  @media(min-width: 767px) {
+    will-change: transform;
+  }
+
+  @media(max-width: 767px) {
+    width: 100%;
+    position: relative;
+    transform: initial !important;
+  }
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  padding-left: 260px; // ширина .title + отступ
+
+  @media(max-width: 767px) {
+    padding-left: 0;
+  }
+}
+
+

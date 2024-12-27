@@ -1,5 +1,5 @@
 {
-  "name": "slider",
+  "name": "projects",
   "private": true,
   "scripts": {
     "dev": "next dev",
