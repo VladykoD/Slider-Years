@@ -6,9 +6,6 @@ const Page: NextPageWithLayout = () => (
   <>
     <div className={"empty"} />
     <div className={"empty"} />
-    <div className={"empty"} />
-    <div className={"empty"} />
-    <div className={"empty"} />
     <ScrollSection />
     <div className={"empty"} />
     <div className={"empty"} />
