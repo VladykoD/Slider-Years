@@ -1,6 +1,6 @@
 import { NextPageWithLayout } from "next";
 import { DefaultLayout } from "@/layouts/default";
-import { ScrollSection } from "@/components/blocks/scroll-section";
+import { SliderSection } from "@/components/blocks/slider-section";
 
 const Page: NextPageWithLayout = () => (
     <SliderSection />
