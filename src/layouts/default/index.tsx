@@ -6,5 +6,5 @@ export interface LayoutProps {
 }
 
 export function DefaultLayout({ children }: LayoutProps) {
-  return <div className={styles.layout}>{children}</div>;
+  return <main className={styles.layout}>{children}</main>;
 }
