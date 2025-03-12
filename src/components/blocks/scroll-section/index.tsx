@@ -68,29 +68,30 @@ export const ScrollSection = () => {
     });
   };
 
+  // Эффект для вычисления начальных позиций при монтировании и ресайзе
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      calculateInitialTranslateY();
-      handleScroll();
-    }, 40);
+    calculateInitialTranslateY();
+    handleScroll();
 
     window.addEventListener("resize", calculateInitialTranslateY);
     window.addEventListener("resize", handleScroll);
+    window.addEventListener("load", calculateInitialTranslateY);
 
     return () => {
-      clearTimeout(timeoutId);
       window.removeEventListener("resize", calculateInitialTranslateY);
       window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("load", calculateInitialTranslateY);
     };
-  }, [initialTitleY, screenOffset, bp]);
+  }, [calculateInitialTranslateY, handleScroll]);
 
+  // Отдельный эффект для обработки скролла
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [initialTitleY, screenOffset, isVisible]);
+  }, [handleScroll]);
 
   return (
     <section className={styles.section}>
@@ -99,7 +100,9 @@ export const ScrollSection = () => {
           {scrollData.map((item, index) => (
             <div key={index} className={styles.item}>
               <h4
-                ref={(el) => (titleRefs.current[index] = el)}
+                ref={(el) => {
+                  titleRefs.current[index] = el;
+                }}
                 className={styles.title}
               >
                 {item.title}
