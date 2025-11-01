@@ -26,10 +26,10 @@ export const SmallNav = ({
       </div>
       <div className={styles.buttons}>
         <Button disabled={index === 0} onClick={prevEvent} bg="outline">
-          <Icon size={14} id="prev" />
+          <Icon size={28} id="prev" />
         </Button>
         <Button disabled={index === max - 1} onClick={nextEvent} bg="outline">
-          <Icon size={14} id="next" />
+          <Icon size={28} id="next" />
         </Button>
       </div>
     </div>

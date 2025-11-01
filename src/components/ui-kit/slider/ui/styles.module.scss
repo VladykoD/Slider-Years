@@ -1,9 +1,14 @@
 @import '@/styles/mixins';
 
 .wrapper {
+  margin-top: 20rem;
   height: calc(var(--vh) * .4);
   padding-bottom: calc(var(--vh) * .05);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.title {
+  margin-top: 4rem;
 }

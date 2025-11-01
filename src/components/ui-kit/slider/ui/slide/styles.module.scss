@@ -3,35 +3,71 @@
 
 .slider {
   position: relative;
-  margin-top: 5.6rem;
+  margin-top: 8rem;
   transition: opacity var(--transition-fast);
 
   &.hide {
     opacity: 0;
   }
+  
+  [class *='swiper-pagination-bullets'] {
+    display: flex;
+    gap: 4rem;
+  }
+  span[class *='swiper-pagination-bullet-active'] {
+    background: var(--orange)!important;
+  }
+  span[class *='swiper-pagination-bullet'] {
+    margin: 0!important;
+    position: relative;
+    background: var(--blue-dark);
+    
+    &::before {
+      content: '';
+      inset: -1.5rem;
+      position: absolute;
+    }
+  }
+}
+
+.swipr {
+  padding-bottom: 10rem!important;
 }
 
 .slide {
-  max-width: calc(var(--col) * 5);
+  max-width: calc(var(--col) * 7);
   padding-right: 3.2rem;
 }
 
 .title {
-  color: var(--blue);
+  color: var(--violet);
   margin-bottom: 1.5rem;
-  font: 600 2.5rem / 1 var(--fontNarrow);
+  font: 600 5rem / 1 var(--fontNarrow);
+}
+
+.btnWrap {
+  position: absolute;
+  right: -6rem;
+  gap: 2rem;
+  top: 0;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  font-size: 3rem;
+  color: var(--violet);
 }
 
 .navBtn {
-  top: 50%;
-  transform: translateY(-50%);
-  position: absolute;
+
 }
 
 .prev {
-  left: -6rem;
+
 }
 
 .next {
-  right: -6rem;
+
 }

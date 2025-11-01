@@ -7,11 +7,10 @@ interface Props {
   slides: Slide[];
 }
 
-export const StringsAnimation = ({ slides, index }: Props) => {
+export const StringsAnimation = () => {
   return (
     <div className={styles.title}>
-      <span>{slides[index].date[0]}</span>
-      <span>{slides[index].date[1]}</span>
+      <span>Эволюция персональных компьютеров</span>
     </div>
   );
 };

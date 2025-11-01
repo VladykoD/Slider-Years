@@ -38,7 +38,7 @@
       position: absolute;
       inset: 0;
       border: 1px solid currentColor;
-      opacity: .5;
+      
       border-radius: 50%;
     }
 
@@ -56,24 +56,24 @@
 
 
   &.small {
-    width: 4rem;
-    height: 4rem;
-    font: 400 1.6rem / 1 var(--font);
+    width: 8rem;
+    height: 8rem;
+    font: 400 3.2rem / 1 var(--font);
 
     svg {
-      width: 1rem;
-      height: 1rem;
+      width: 2rem;
+      height: 2rem;
     }
   }
 
   &.medium {
-    width: 5rem;
-    height: 5rem;
-    font: 400 1.8rem / 1 var(--font);
+    width: 10rem;
+    height: 10rem;
+    font: 400 3.6rem / 1 var(--font);
 
     svg {
-      width: 1.2rem;
-      height: 1.2rem;
+      width: 2.4rem;
+      height: 2.4rem;
     }
   }
 

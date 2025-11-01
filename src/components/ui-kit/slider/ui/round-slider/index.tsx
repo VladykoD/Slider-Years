@@ -36,7 +36,10 @@ export const RoundSlider = ({ slides, max, index, clickEvent }: Props) => {
               size="large"
             />
 
-            <span className={styles.label}>{slide.category}</span>
+            <span
+              className={styles.label}
+              dangerouslySetInnerHTML={{ __html: slide.category }}
+            />
           </div>
         </div>
       ))}

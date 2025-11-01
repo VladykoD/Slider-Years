@@ -4,8 +4,7 @@
 .title {
   display: flex;
   gap: var(--col);
-  font: 600 20rem / 1 var(--font);
-  letter-spacing: -0.02em;
+  font: 600 14rem / 1 var(--font);
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -13,13 +12,7 @@
   z-index: 1;
 
   span {
-    &:first-of-type {
-      color: var(--iris);
-    }
-
-    &:nth-of-type(2) {
-      color: var(--fuchsia);
-    }
+    color: var(--violet);
   }
 
   &::before,

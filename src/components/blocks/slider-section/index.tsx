@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 export const SliderSection = () => (
   <section className={styles.section}>
     <div className={styles.container}>
-      <YearsSlider title={"Исторические даты"} slides={slides} />
+      <YearsSlider slides={slides} />
     </div>
   </section>
 );

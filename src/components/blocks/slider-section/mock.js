@@ -1,257 +1,165 @@
 export const slides = [
   {
-    id: "01",
-    date: ["2010", "2017"],
+    id: "00",
+    category: "Ранние вычислительные машины и&nbsp;прототипы",
+    date: ["1971", "1975", "1976", "1977"],
     events: [
       {
         id: "01",
-        date: "2010",
-        description: "Категория 1",
+        date: "1801",
+        description: "Жаккард изобрёл ткацкий станок с перфокартами",
       },
       {
         id: "02",
-        date: "2011",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
+        date: "1821",
+        description: "Чарльз Бэббидж задумал паровую вычислительную машину",
       },
       {
         id: "03",
-        date: "2012",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        date: "1848",
+        description: "Ада Лавлейс написала первую компьютерную программу",
       },
       {
         id: "04",
-        date: "2013",
+        date: "1937",
         description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
-      },
-      {
-        id: "05",
-        date: "2014",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      },
-      {
-        id: "06",
-        date: "2015",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
-      },
-      {
-        id: "07",
-        date: "2016",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      },
-      {
-        id: "08",
-        date: "2017",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
+          "Джон Атанасофф создал проект первого электронного компьютера",
       },
     ],
-    category: "Мультипликация",
+  },
+  {
+    id: "01",
+    category: "Появление первых персональных компьютеров",
+    date: ["1971", "1975", "1976", "1977"],
+    events: [
+      {
+        id: "01",
+        date: "1971",
+        description: "Intel выпускает первый микропроцессор 4004",
+      },
+      {
+        id: "02",
+        date: "1975",
+        description: "Появляется Altair 8800 — первый массовый ПК",
+      },
+      {
+        id: "03",
+        date: "1976",
+        description: "Apple I — первый компьютер Apple",
+      },
+      {
+        id: "04",
+        date: "1977",
+        description: "Выпуск Apple II, TRS-80 и Commodore PET",
+      },
+    ],
   },
   {
     id: "02",
-    date: ["2015", "2018"],
+    category: "Феномен IBM PC и&nbsp;его&nbsp;клонов",
+    date: ["1981", "1982", "1983", "1985"],
     events: [
       {
-        id: "09",
-        date: "2015",
-        description: "Категория 2",
+        id: "01",
+        date: "1981",
+        description: "IBM представляет первый PC 5150",
       },
       {
-        id: "10",
-        date: "2016",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
+        id: "02",
+        date: "1982",
+        description: "Compaq выпускает первый портативный ПК",
       },
       {
-        id: "11",
-        date: "2017",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        id: "03",
+        date: "1983",
+        description: "Apple Lisa — первый ПК с графическим интерфейсом",
       },
       {
-        id: "12",
-        date: "2018",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
+        id: "04",
+        date: "1985",
+        description: "Выпуск Windows 1.0 от Microsoft",
       },
     ],
-    category: "Кино",
   },
   {
     id: "03",
-    date: ["2017", "2018"],
+    category: "Развитие программного обеспечения и&nbsp;ОС",
+    date: ["1990", "1996", "1999", "2001"],
     events: [
       {
-        id: "13",
-        date: "2017",
-
-        description: "Категория 3",
+        id: "01",
+        date: "1990",
+        description: "Выпуск Windows 3.0 с графическим интерфейсом",
       },
       {
-        id: "14",
-        date: "2018",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
+        id: "02",
+        date: "1996",
+        description: "Создание поисковой системы Google",
+      },
+      {
+        id: "03",
+        date: "1999",
+        description: "Разработка стандарта Wi-Fi",
+      },
+      {
+        id: "04",
+        date: "2001",
+        description: "Выпуск Mac OS X от Apple",
       },
     ],
-    category: "Литература",
   },
   {
     id: "04",
-    date: ["1999", "2001"],
+    category: "Компьютеры в&nbsp;XXI&nbsp;веке",
+    date: ["2003", "2005", "2009", "2010"],
     events: [
       {
-        id: "15",
-        date: "1999",
-
-        description: "Категория 4",
+        id: "01",
+        date: "2003",
+        description: "AMD выпускает первый 64-битный процессор Athlon 64",
       },
       {
-        id: "16",
-        date: "2000",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
+        id: "02",
+        date: "2005",
+        description: "Google приобретает Android OS",
       },
       {
-        id: "17",
-        date: "2001",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
+        id: "03",
+        date: "2009",
+        description: "Выпуск Windows 7",
+      },
+      {
+        id: "04",
+        date: "2010",
+        description: "Apple представляет iPad",
       },
     ],
-    category: "Балет",
   },
   {
     id: "05",
-    date: ["1996", "2006"],
+    category: "Современные технологии и&nbsp;перспективы",
+    date: ["2011", "2016", "2017", "2020"],
     events: [
       {
-        id: "18",
-        date: "1996",
-
-        description: "Категория 5",
+        id: "01",
+        date: "2011",
+        description: "Google выпускает Chromebook",
       },
       {
-        id: "19",
-        date: "1997",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
-      },
-      {
-        id: "20",
-        date: "1998",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
-      },
-      {
-        id: "21",
-        date: "1999",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      },
-      {
-        id: "22",
-        date: "2000",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
-      },
-      {
-        id: "23",
-        date: "2001",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
-      },
-      {
-        id: "24",
-        date: "2002",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      },
-      {
-        id: "25",
-        date: "2003",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
-      },
-      {
-        id: "26",
-        date: "2004",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
-      },
-      {
-        id: "27",
-        date: "2005",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      },
-      {
-        id: "28",
-        date: "2006",
-        description:
-          "It is a long established fact that a reader will be distracted by the readable content of a page",
-      },
-    ],
-    category: "Технологии",
-  },
-  {
-    id: "6",
-    date: ["2008", "2016"],
-    events: [
-      {
-        id: "29",
-        date: "2008",
-        description: "Категория 6",
-      },
-      {
-        id: "30",
+        id: "02",
         date: "2016",
-        description:
-          "Телескоп &laquo;Хаббл&raquo; обнаружил самую удалённую из&nbsp;всех обнаруженных галактик, получившую обозначение GN-z11",
+        description: "Создан первый перепрограммируемый квантовый компьютер",
       },
       {
-        id: "31",
+        id: "03",
         date: "2017",
-        description:
-          "Компания Tesla официально представила первый в&nbsp;мире электрический грузовик Tesla Semi",
+        description: "DARPA начинает разработку молекулярной информатики",
       },
       {
-        id: "32",
-        date: "2018",
-        description:
-          "13&nbsp;сентября&nbsp;&mdash; частное солнечное затмение, видимое в&nbsp;Южной Африке и&nbsp;части Антарктиды",
-      },
-      {
-        id: "33",
-        date: "2019",
-        description:
-          "Телескоп &laquo;Хаббл&raquo; обнаружил самую удалённую из&nbsp;всех обнаруженных галактик, получившую обозначение GN-z11",
-      },
-      {
-        id: "34",
+        id: "04",
         date: "2020",
-        description:
-          "Компания Tesla официально представила первый в&nbsp;мире электрический грузовик Tesla Semi",
-      },
-      {
-        id: "35",
-        date: "2021",
-        description:
-          "13&nbsp;сентября&nbsp;&mdash; частное солнечное затмение, видимое в&nbsp;Южной Африке и&nbsp;части Антарктиды",
-      },
-      {
-        id: "36",
-        date: "2022",
-        description:
-          "Телескоп &laquo;Хаббл&raquo; обнаружил самую удалённую из&nbsp;всех обнаруженных галактик, получившую обозначение GN-z11",
+        description: "Развитие ИИ и облачных вычислений для ПК",
       },
     ],
-    category: "Наука",
   },
 ];

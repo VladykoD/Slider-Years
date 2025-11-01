@@ -12,12 +12,15 @@
   --transition-medium: .6s var(--ease);
   --transition-slow: .8s var(--ease);
 
-  --iris: #5D5FEF;
-  --fuchsia: #EF5DA8;
-  --blue: #3877EE;
-  --blue-dark: #42567A;
-  --white: #fff;
-  --grey: #F4F5F9;
+  --white: #E9E9E9;
+  --orange: #FF8040;
+  --blue: #0046FF;
+  --purple: #001BB7;
+  
+  --iris: #0046FF;
+  --fuchsia: #FF8040;
+  --blue-dark: #001BB7;
+  --grey: #E9E9E9;
   --gradient: linear-gradient(to bottom, var(--iris), var(--fuchsia));
  
   --col: calc(var(--vw) / 24);

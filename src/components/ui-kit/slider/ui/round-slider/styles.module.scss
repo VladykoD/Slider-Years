@@ -71,32 +71,16 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: var(--blue-dark);
+      background: var(--orange);
       border: none;
       border-radius: 50%;
-      transform: scale(0.2);
+      transform: scale(0.3);
       z-index: 1;
       opacity: 1;
       will-change: transform;
       transition: transform .3s ease .2s;
     }
-
-    &::before {
-      content: attr(data-id);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      inset: 0;
-      border: 1px solid rgba(66, 86, 122, .5);
-      opacity: 0;
-      background: white;
-      border-radius: 50%;
-      z-index: 2;
-      will-change: opacity;
-      transition: opacity .2s ease .1s;
-    }
-
+    
     &:hover {
       color: currentColor;
 
@@ -117,6 +101,6 @@
     left: calc(100% + 2rem);
     opacity: 0;
     visibility: hidden;
-    font: 600 2rem / 1 var(--font);
+    font: 600 4rem / 1 var(--font);
   }
 }
